@@ -1,0 +1,12 @@
+image: runningman84/kube-router:latest
+manifests:
+  -
+    image: runningman84/kube-router:arm64
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: runningman84/kube-router:amd64
+    platform:
+      architecture: amd64
+      os: linux

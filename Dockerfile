@@ -8,6 +8,7 @@ RUN go get github.com/osrg/gobgp/cmd/gobgp
 RUN cd $GOPATH/src/github.com/osrg/gobgp && dep ensure
 RUN GOOS=linux CGO_ENABLED=0 go install github.com/osrg/gobgp/cmd/gobgp
 
+# kube-router
 RUN go get github.com/cloudnativelabs/kube-router/cmd/kube-router
 RUN cd $GOPATH/src/github.com/cloudnativelabs/kube-router/ && dep ensure
 RUN GOOS=linux CGO_ENABLED=0 go install github.com/cloudnativelabs/kube-router/cmd/kube-router
