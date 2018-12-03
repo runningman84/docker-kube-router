@@ -14,6 +14,7 @@ RUN cd $GOPATH/src/github.com/cloudnativelabs/kube-router/ && dep ensure
 RUN GOOS=linux CGO_ENABLED=0 go install github.com/cloudnativelabs/kube-router/cmd/kube-router
 
 FROM alpine
+LABEL maintainer="Philipp Hellmich <phil@hellmi.de>"
 
 RUN apk add --no-cache \
       iptables \
